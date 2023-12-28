@@ -16,6 +16,7 @@ gem 'tzinfo-data', platforms: %i[ windows jruby ]
 gem 'bootsnap', require: false
 
 gem 'devise', '~> 4.9'
+gem 'rack-cors'
 
 group :development, :test do
   gem 'debug', platforms: %i[ mri windows ]
