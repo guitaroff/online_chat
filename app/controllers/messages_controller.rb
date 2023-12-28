@@ -1,5 +1,4 @@
 class MessagesController < ApplicationController
-
   def create
     @new_message = current_user.messages.create!(message_params)
 
