@@ -4,6 +4,11 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def set_current_user
+    @current_user = current_user
+    redirect_to new_user_session_path unless @current_user
+  end
+
   def render_invalid_error
     flash[:error] = 'Не заполнены необходимые поля'
     redirect_to root_path

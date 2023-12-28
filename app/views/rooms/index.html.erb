@@ -1,8 +1,8 @@
 <%= turbo_stream_from :rooms %>
 
-<%= turbo_frame_tag :rooms do %>
+<div>
   <%= render @rooms %>
-<% end %>
+</div>
 
 <%= form_with url: rooms_path, scope: :room, method: :post do |f| %>
   <%= f.text_field :title %>
